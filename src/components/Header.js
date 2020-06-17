@@ -19,7 +19,7 @@ const HeaderContainer = styled.div`
 `;
 
 const HeaderContent = styled.div`
-  @media only screen and (max-width: 880px) {
+  @media only screen and (max-width: 870px) {
     width: 100%;
   }
   display: flex;
@@ -49,7 +49,7 @@ export default function Header() {
 
   return (
     <HeaderContainer>
-      {width > 880 ? (
+      {width > 870 ? (
         <HeaderContent>
           <HeaderLink href="/">STARTSEITE</HeaderLink>
           <HeaderLink href="/">ÜBER UNS</HeaderLink>
