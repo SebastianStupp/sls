@@ -11,7 +11,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.colors.primaryBorder};
-  min-height: 100px;
+  min-height: 80px;
   max-height: 100px;
   position: fixed;
   left: 0;
@@ -26,9 +26,10 @@ const HeaderContent = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   padding: 5px;
-  width: 60%;
+  width: 80%;
   z-index: 1;
   position: fixed;
+  font-size: 1.6rem;
 `;
 
 const HeaderLink = styled.a`
