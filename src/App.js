@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import theme from "./theme";
 import GlobalStyle from "./GlobalStyles";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Header>Test</Header>
+            <Footer />
           </Route>
         </Switch>
       </Router>
