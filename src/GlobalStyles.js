@@ -1,11 +1,11 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
-import Dom from "./assets/dom.svg";
+import WebBackground from "./assets/WebBackground.svg";
 
 function GlobalStyle() {
   return (
     <Global
-      styles={(theme) => css`
+      styles={() => css`
         @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
         *,
         *:before,
@@ -13,17 +13,16 @@ function GlobalStyle() {
           box-sizing: border-box;
         }
         body {
-          height: 100%;
-          width: 100%;
+          height: 100vh;
+          width: 100vw;
           font-size: 16px;
           margin: 0;
           font-family: "Roboto", sans-serif;
           font-weight: 400;
-          background: ${theme.colors.background};
-          background-image: url(${Dom});
+          background-image: url(${WebBackground});
           background-attachment: fixed;
           background-repeat: no-repeat;
-          background-size: cover;
+          background-size: fill;
         }
       `}
     />

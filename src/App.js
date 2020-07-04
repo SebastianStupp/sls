@@ -4,8 +4,8 @@ import { ThemeProvider } from "emotion-theming";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import theme from "./theme";
 import GlobalStyle from "./GlobalStyles";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -14,8 +14,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Header>Test</Header>
-            <Footer />
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
           </Route>
         </Switch>
       </Router>
