@@ -56,23 +56,6 @@ export default function MobilCard() {
           professionellen Sicherheitsdienst in der Region.
         </CardFooterContent>
       </CardContainer>
-      <CardContainer>
-        <CardContentTitle>
-          Willkommen beim SLS - SICHERHEITSSERVICE
-        </CardContentTitle>
-        <CardMainContent>
-          Warum sollten Sie sich für unser Unternehmen entscheiden?
-          Sicherheitsdienste gibt es viele, aber letztendlich ist es immer
-          Vertrauenssache, welchem Unternehmen Sie sich anvertrauen, und wer für
-          Sie die Sicherheit übernimmt. Wir sind zertifiziert, das heißt unser
-          Personal ist professionell ausgebildet und auf der Basis deutscher
-          Standards geprüft.
-        </CardMainContent>
-        <CardFooterContent>
-          Vertrauen Sie daher uns, SLS - Sicherheitsservice Ihrem
-          professionellen Sicherheitsdienst in der Region.
-        </CardFooterContent>
-      </CardContainer>
     </>
   );
 }
