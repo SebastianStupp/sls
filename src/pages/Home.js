@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import HomeCard from "../components/Cards/HomeCard";
 import useWindowDimensions from "../Hooks/useMediaResize";
-import MobilCard from "../components/Mobil/MobilCard";
+import MobilHomeCard from "../components/Mobil/MobilHomeCard";
 import MobilFooter from "../components/Mobil/MobilFooter";
 import MobilHeader from "../components/Mobil/MobilHeader";
+import MobilMenu from "../components/Mobil/MobilMenu";
 
 const Container = styled.div`
   width: 100%;
@@ -28,9 +29,9 @@ const HeaderContainer = styled.header`
 const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 100%;
   width: 85%;
 `;
 const FooterContainer = styled.footer`
@@ -41,7 +42,16 @@ const FooterContainer = styled.footer`
 
 export default function Home() {
   const { width } = useWindowDimensions();
+  const [activeMenu, setActiveMenu] = useState(false);
 
+  const closeModal = (event) => {
+    if (event.target === event.currentTarget) {
+      setActiveMenu(!activeMenu);
+    }
+  };
+  function openMenuOnClick() {
+    setActiveMenu(!activeMenu);
+  }
   return (
     <>
       {width > 1050 ? (
@@ -49,17 +59,20 @@ export default function Home() {
           <HomeCard />
         </Container>
       ) : (
-        <Container>
-          <HeaderContainer>
-            <MobilHeader />
-          </HeaderContainer>
-          <MainContainer>
-            <MobilCard />
-          </MainContainer>
-          <FooterContainer>
-            <MobilFooter />
-          </FooterContainer>
-        </Container>
+        <>
+          {activeMenu ? <MobilMenu closeMenu={closeModal} /> : null}
+          <Container>
+            <HeaderContainer>
+              <MobilHeader OpenMenu={openMenuOnClick} />
+            </HeaderContainer>
+            <MainContainer>
+              <MobilHomeCard />
+            </MainContainer>
+            <FooterContainer>
+              <MobilFooter />
+            </FooterContainer>
+          </Container>
+        </>
       )}
     </>
   );

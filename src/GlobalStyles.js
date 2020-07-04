@@ -13,8 +13,8 @@ function GlobalStyle() {
           box-sizing: border-box;
         }
         body {
-          height: 100vh;
-          width: 100vw;
+          height: 100%;
+          width: 100%;
           font-size: 16px;
           margin: 0;
           font-family: "Roboto", sans-serif;
@@ -22,7 +22,7 @@ function GlobalStyle() {
           background-image: url(${WebBackground});
           background-attachment: fixed;
           background-repeat: no-repeat;
-          background-size: fill;
+          background-size: cover;
         }
       `}
     />

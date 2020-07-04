@@ -76,7 +76,9 @@ export default function Menu() {
       <SocialMediaIconContainer>
         <SocialMediaWrapperOne>
           <img src={EmailIcon} alt="Ein Email Icon zum klicken" />
-          <img src={FacebookIcon} alt="Ein Facebook Icon zum klicken" />
+          <a href="https://www.facebook.com/SLS.Sicherheit.Rhein.Erft/?ref=page_internal">
+            <img src={FacebookIcon} alt="Ein Facebook Icon zum klicken" />
+          </a>
         </SocialMediaWrapperOne>
         <SocialMediaWrapperTwo>
           <img src={InstagramIcon} alt="Ein Instagram Icon zum klicken" />

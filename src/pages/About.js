@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "@emotion/styled";
 import AboutCard from "../components/Cards/AboutCard";
-import WebBackground from "../assets/WebBackground.svg";
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(${WebBackground});
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  @media only screen and (min-width: 1050px) {
+    position: fixed;
+    top: 0;
+  }
 `;
 
 export default function Home() {

@@ -4,21 +4,20 @@ import styled from "@emotion/styled";
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   text-align: center;
   background: white;
   width: 100%;
   height: 100%;
-  margin: 10px;
-  position: relative;
+  min-height: 450px;
   border-radius: 30px;
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
 `;
 
 const CardContentTitle = styled.h2`
   color: #3fb7fc;
-  font-size: 2.5vh;
+  font-size: 1.4rem;
   width: 85%;
 `;
 
@@ -31,7 +30,7 @@ const CardMainContent = styled.p`
 `;
 
 const CardFooterContent = styled.h3`
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: #3fb7fc;
   width: 85%;
 `;

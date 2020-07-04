@@ -39,6 +39,12 @@ const NavButton = styled(NavLink)`
   border-left: ${(props) => (props.active ? "8px solid white" : null)};
   position: relative;
 
+  @media only screen and (max-width: 1050px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 98%;
+  }
+
   :nth-of-type(1) {
     animation: ${animationStartLeft} 1s ease-in-out forwards 0.5s;
     opacity: 0;
