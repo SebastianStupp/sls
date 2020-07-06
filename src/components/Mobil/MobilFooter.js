@@ -32,12 +32,12 @@ const Link = styled.a`
 export default function MobilFooter() {
   return (
     <FooterContainer>
-      <img src={MobilEmailIcon} />
+      <img src={MobilEmailIcon} alt="Email Symbol" />
       <Link href="https://www.facebook.com/SLS.Sicherheit.Rhein.Erft/?ref=page_internal">
-        <img src={MobilFacebookIcon} />
+        <img src={MobilFacebookIcon} alt="Facebook Symbol" />
       </Link>
-      <img src={MobilInstagramIcon} />
-      <img src={MobilXingIcon} />
+      <img src={MobilInstagramIcon} alt="Instagram Symbol" />
+      <img src={MobilXingIcon} alt="Xing Symbol" />
     </FooterContainer>
   );
 }

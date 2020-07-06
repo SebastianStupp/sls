@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import AboutCard from "../components/Cards/AboutCard";
+import ContactCard from "../components/Cards/ContactCard";
 import MobilAboutCard from "../components/Mobil/MobilAboutCard";
 import MobilFooter from "../components/Mobil/MobilFooter";
 import MobilHeader from "../components/Mobil/MobilHeader";
@@ -55,7 +55,7 @@ export default function Home() {
     <>
       {width > 1050 ? (
         <Container>
-          <AboutCard />
+          <ContactCard />
         </Container>
       ) : (
         <>

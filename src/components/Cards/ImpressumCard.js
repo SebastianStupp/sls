@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
-import MenuLion from "../assets/MenuLion.svg";
-import EmailIcon from "../assets/EmailIcon.svg";
-import FacebookIcon from "../assets/FacebookIcon.svg";
-import InstagramIcon from "../assets/InstagramIcon.svg";
-import XingIcon from "../assets/XingIcon.svg";
-import HomeLion from "../assets/HomeLion.svg";
-import Navigation from "../utils/Navigation";
+import MenuLion from "../../assets/MenuLion.svg";
+import EmailIcon from "../../assets/EmailIcon.svg";
+import FacebookIcon from "../../assets/FacebookIcon.svg";
+import InstagramIcon from "../../assets/InstagramIcon.svg";
+import XingIcon from "../../assets/XingIcon.svg";
+import Navigation from "../../utils/Navigation";
+import UnderConstruction from "../../assets/UnderConstruction.svg";
 
 const MainCardContainer = styled.div`
   width: 90%;
@@ -19,33 +19,9 @@ const MainCardContainer = styled.div`
 
 const CardContent = styled.div`
   text-align: center;
-  flex-basis: 50%;
+  flex-basis: 87%;
   padding: 5%;
   margin-top: 3%;
-`;
-
-const CardContentTitle = styled.h2`
-  color: #3fb7fc;
-  font-size: 1.4rem;
-`;
-
-const CardMainContent = styled.p`
-  margin-top: 10%;
-  margin-bottom: 10%;
-  font-size: 1.4rem;
-  text-align: center;
-  color: #838080;
-`;
-
-const CardFooterContent = styled.h3`
-  font-size: 1.4rem;
-  color: #3fb7fc;
-`;
-
-const CardImage = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding: 3%;
 `;
 
 const MenuContainer = styled.div`
@@ -75,14 +51,7 @@ const SocialMediaWrapperTwo = styled.div`
   justify-content: space-around;
 `;
 
-const HomeLionImage = styled.img`
-  flex-basis: 37%;
-  right: 7%;
-  bottom: 25%;
-  position: fixed;
-`;
-
-export default function MainCard() {
+export default function AboutCard() {
   return (
     <MainCardContainer>
       <MenuContainer>
@@ -100,28 +69,8 @@ export default function MainCard() {
         </SocialMediaIconContainer>
       </MenuContainer>
       <CardContent>
-        <CardContentTitle>
-          Willkommen beim SLS - SICHERHEITSSERVICE
-        </CardContentTitle>
-        <CardMainContent>
-          Warum sollten Sie sich für unser Unternehmen entscheiden?
-          Sicherheitsdienste gibt es viele, aber letztendlich ist es immer
-          Vertrauenssache, welchem Unternehmen Sie sich anvertrauen, und wer für
-          Sie die Sicherheit übernimmt. Wir sind zertifiziert, das heißt unser
-          Personal ist professionell ausgebildet und auf der Basis deutscher
-          Standards geprüft.
-        </CardMainContent>
-        <CardFooterContent>
-          Vertrauen Sie daher uns, SLS - Sicherheitsservice Ihrem
-          professionellen Sicherheitsdienst in der Region.
-        </CardFooterContent>
+        <img src={UnderConstruction} />
       </CardContent>
-      <CardImage>
-        <HomeLionImage
-          src={HomeLion}
-          alt="Großes rundes Bild mit einem Löwenkopf"
-        />
-      </CardImage>
     </MainCardContainer>
   );
 }

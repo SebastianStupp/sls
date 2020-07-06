@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import MenuLion from "../../assets/MenuLion.svg";
-import EmailIcon from "../../assets/EmailIcon.svg";
-import FacebookIcon from "../../assets/FacebookIcon.svg";
-import InstagramIcon from "../../assets/InstagramIcon.svg";
-import XingIcon from "../../assets/XingIcon.svg";
-import Navigation from "../../utils/Navigation";
-import UnderConstruction from "../../assets/UnderConstruction.svg";
+import Menu from "../../components/Menu";
+import SlideShow from "../Slideshow";
 
 const MainCardContainer = styled.div`
   width: 90%;
@@ -15,62 +10,57 @@ const MainCardContainer = styled.div`
   min-height: 500px;
   background: white;
   border-radius: 20px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
 `;
 
 const CardContent = styled.div`
   text-align: center;
-  flex-basis: 87%;
+  flex-basis: 50%;
   padding: 5%;
   margin-top: 3%;
 `;
 
-const MenuContainer = styled.div`
-  flex-basis: 13%;
-  height: 100%;
-  background: #0777b7;
-  border-radius: 20px 0 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: none;
+const CardContentTitle = styled.h2`
+  color: #3fb7fc;
+  font-size: 3vh;
+  width: 100%;
 `;
 
-const SocialMediaIconContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+const CardMainContent = styled.p`
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 2vh;
+  text-align: center;
+  color: #838080;
+  width: 100%;
 `;
 
-const SocialMediaWrapperOne = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
-`;
-const SocialMediaWrapperTwo = styled.div`
-  display: flex;
-  justify-content: space-around;
+const CardFooterContent = styled.h3`
+  font-size: 2vh;
+  color: #3fb7fc;
+  width: 100%;
 `;
 
 export default function AboutCard() {
   return (
     <MainCardContainer>
-      <MenuContainer>
-        <img src={MenuLion} alt="Rundes Bild mit einem Löwenkopf" />
-        <Navigation />
-        <SocialMediaIconContainer>
-          <SocialMediaWrapperOne>
-            <img src={EmailIcon} alt="Ein Email Icon zum klicken" />
-            <img src={FacebookIcon} alt="Ein Facebook Icon zum klicken" />
-          </SocialMediaWrapperOne>
-          <SocialMediaWrapperTwo>
-            <img src={InstagramIcon} alt="Ein Instagram Icon zum klicken" />
-            <img src={XingIcon} alt="Ein Xing Icon zum klicken" />
-          </SocialMediaWrapperTwo>
-        </SocialMediaIconContainer>
-      </MenuContainer>
+      <Menu />
       <CardContent>
-        <img src={UnderConstruction} />
+        <CardContentTitle />
+        <CardMainContent>
+          Unser Team arbeitet zu 100 % verlässlich und bietet Ihnen damit ein
+          Maximum an Sicherheit. Alleine die ständige wachsende Kundenliste
+          unserem Unternehmens ist ein klarer Beleg für unseren Erfolg. Unsere
+          Kunden/-innen schätzen unsere absoluter Zuverlässigkeit, Diskretion
+          und Vertrauen.
+        </CardMainContent>
+        <CardFooterContent>
+          Durch regelmäßige Schulungen und Weiterbildungen sind alle
+          Sicherheitsmitarbeiter stets auf dem neuesten Stand und können den
+          Auftraggebern/-innen so ein hohes Dienstleistungsniveau bieten.
+        </CardFooterContent>
       </CardContent>
+      <SlideShow />
     </MainCardContainer>
   );
 }

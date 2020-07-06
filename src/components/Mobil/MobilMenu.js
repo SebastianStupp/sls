@@ -30,6 +30,17 @@ const ModalContainer = styled.div`
 `;
 
 const MenuContainer = styled.div`
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 65%;
+  top: 0;
+  position: relative;
+  background: #0777b7;
+  border-radius: 0px 15px 15px 0px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4); */
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,6 +50,7 @@ const MenuContainer = styled.div`
   position: relative;
   background: #0777b7;
   border-radius: 0px 15px 15px 0px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
 `;
 
 export default function MobilMenu({ closeMenu }) {

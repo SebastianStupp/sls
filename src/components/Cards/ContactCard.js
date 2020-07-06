@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
-import MenuLion from "../assets/MenuLion.svg";
-import EmailIcon from "../assets/EmailIcon.svg";
-import FacebookIcon from "../assets/FacebookIcon.svg";
-import InstagramIcon from "../assets/InstagramIcon.svg";
-import XingIcon from "../assets/XingIcon.svg";
-import HomeLion from "../assets/HomeLion.svg";
-import Navigation from "../utils/Navigation";
+import Menu from "../Menu";
+import ContactForm from "../ContactForm";
 
 const MainCardContainer = styled.div`
   width: 90%;
   height: 70%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 500px;
   background: white;
   border-radius: 20px;
@@ -19,109 +16,34 @@ const MainCardContainer = styled.div`
 
 const CardContent = styled.div`
   text-align: center;
-  flex-basis: 50%;
-  padding: 5%;
-  margin-top: 3%;
+  flex-basis: 57%;
+  padding: 5px;
+  margin: 5px;
 `;
 
-const CardContentTitle = styled.h2`
-  color: #3fb7fc;
-  font-size: 1.4rem;
-`;
-
-const CardMainContent = styled.p`
-  margin-top: 10%;
-  margin-bottom: 10%;
-  font-size: 1.4rem;
-  text-align: center;
-  color: #838080;
-`;
-
-const CardFooterContent = styled.h3`
-  font-size: 1.4rem;
-  color: #3fb7fc;
-`;
-
-const CardImage = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding: 3%;
-`;
-
-const MenuContainer = styled.div`
-  flex-basis: 13%;
-  height: 100%;
-  background: #0777b7;
-  border-radius: 20px 0 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: none;
-`;
-
-const SocialMediaIconContainer = styled.div`
+const GoogleCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-basis: 30%;
 `;
 
-const SocialMediaWrapperOne = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
-`;
-const SocialMediaWrapperTwo = styled.div`
-  display: flex;
-  justify-content: space-around;
+const Google = styled.iframe`
+  width: 500px;
+  height: 500px;
 `;
 
-const HomeLionImage = styled.img`
-  flex-basis: 37%;
-  right: 7%;
-  bottom: 25%;
-  position: fixed;
-`;
-
-export default function MainCard() {
+export default function ContactCard() {
   return (
     <MainCardContainer>
-      <MenuContainer>
-        <img src={MenuLion} alt="Rundes Bild mit einem Löwenkopf" />
-        <Navigation />
-        <SocialMediaIconContainer>
-          <SocialMediaWrapperOne>
-            <img src={EmailIcon} alt="Ein Email Icon zum klicken" />
-            <img src={FacebookIcon} alt="Ein Facebook Icon zum klicken" />
-          </SocialMediaWrapperOne>
-          <SocialMediaWrapperTwo>
-            <img src={InstagramIcon} alt="Ein Instagram Icon zum klicken" />
-            <img src={XingIcon} alt="Ein Xing Icon zum klicken" />
-          </SocialMediaWrapperTwo>
-        </SocialMediaIconContainer>
-      </MenuContainer>
+      <Menu />
       <CardContent>
-        <CardContentTitle>
-          Willkommen beim SLS - SICHERHEITSSERVICE
-        </CardContentTitle>
-        <CardMainContent>
-          Warum sollten Sie sich für unser Unternehmen entscheiden?
-          Sicherheitsdienste gibt es viele, aber letztendlich ist es immer
-          Vertrauenssache, welchem Unternehmen Sie sich anvertrauen, und wer für
-          Sie die Sicherheit übernimmt. Wir sind zertifiziert, das heißt unser
-          Personal ist professionell ausgebildet und auf der Basis deutscher
-          Standards geprüft.
-        </CardMainContent>
-        <CardFooterContent>
-          Vertrauen Sie daher uns, SLS - Sicherheitsservice Ihrem
-          professionellen Sicherheitsdienst in der Region.
-        </CardFooterContent>
+        <ContactForm />
       </CardContent>
-      <CardImage>
-        <HomeLionImage
-          src={HomeLion}
-          alt="Großes rundes Bild mit einem Löwenkopf"
-        />
-      </CardImage>
+      <GoogleCardContainer>
+        <Google src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2515.4414716363194!2d6.748711316127989!3d50.91554997954219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf394c7bd0b167%3A0xe6c484e124f1bfc3!2sSLS-Sicherheitsservice!5e0!3m2!1sde!2sde!4v1594027125256!5m2!1sde!2sde" />
+      </GoogleCardContainer>
     </MainCardContainer>
   );
 }

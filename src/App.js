@@ -6,6 +6,7 @@ import theme from "./theme";
 import GlobalStyle from "./GlobalStyles";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -17,6 +18,18 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/about">
+            <About />
+          </Route>
+
+          <Route exact path="/services">
+            <About />
+          </Route>
+
+          <Route exact path="/contact">
+            <Contact></Contact>
+          </Route>
+
+          <Route exact path="/impressum">
             <About />
           </Route>
         </Switch>
